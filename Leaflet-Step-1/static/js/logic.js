@@ -25,9 +25,24 @@ function createFeatures(earthquakeData) {
               fillOpacity: .6,
               color: "black",
               stroke: true,
-              weight: .8
+              weight: .75
             })
         }
     });
     createMap (earthquakes);
+}
+
+//create the mapping
+function createMap(earthquakes) {
+    var topoMap = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}', {
+        maxZoom: 20,
+        attribution: 'Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>'
+    });
+
+    var streetMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    });
+
+    var 
+});
 }
